@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="dashboard">
+    <h2><i class="fas fa-tachometer-alt"></i> Панель управления</h2>
+
+    {% if stats %}
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon bg-primary">
+                <i class="fas fa-boxes"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Товаров в каталоге</h3>
+                <p>{{ stats.products }}</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon bg-success">
+                <i class="fas fa-box-open"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Единиц на складе</h3>
+                <p>{{ stats.total_items }}</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon bg-info">
+                <i class="fas fa-warehouse"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Количество складов</h3>
+                <p>{{ stats.warehouses }}</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon bg-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="stat-info">
+                <h3>Товаров мало</h3>
+                <p>{{ stats.low_stock }}</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="alert alert-danger">
+        Не удалось загрузить статистику. Проверьте подключение к базе данных.
+    </div>
+    {% endif %}
+</section>
+{% endblock %}
