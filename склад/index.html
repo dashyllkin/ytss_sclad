@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление складом</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-warehouse"></i>
+                <h1>СкладPRO</h1>
+            </div>
+            <div class="user-info">
+                <span>Иванов И.И. (Администратор)</span>
+                <button class="btn logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </header>
+
+        <!-- Основное содержимое -->
+        <div class="main-content">
+            <!-- Боковое меню -->
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> Панель управления</a></li>
+                        <li><a href="#"><i class="fas fa-boxes"></i> Товары</a></li>
+                        <li><a href="#"><i class="fas fa-warehouse"></i> Склады</a></li>
+                        <li><a href="#"><i class="fas fa-receipt"></i> Приход</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Расход</a></li>
+                        <li><a href="#"><i class="fas fa-exchange-alt"></i> Перемещения</a></li>
+                        <li><a href="#"><i class="fas fa-clipboard-check"></i> Инвентаризация</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i> Поставщики</a></li>
+                        <li><a href="#"><i class="fas fa-user-tie"></i> Клиенты</a></li>
+                        <li><a href="#"><i class="fas fa-chart-bar"></i> Отчеты</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Настройки</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Контентная область -->
+            <main class="content">
+                <div class="dashboard">
+                    <h2><i class="fas fa-tachometer-alt"></i> Панель управления</h2>
+                    
+                    <!-- Статистика -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #4e73df;">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Товаров на складе</h3>
+                                <p>1,248</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #1cc88a;">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Общая стоимость</h3>
+                                <p>2,456,789 ₽</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #36b9cc;">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Приход за месяц</h3>
+                                <p>24</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: #f6c23e;">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Расход за месяц</h3>
+                                <p>18</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Последние операции -->
+                    <div class="recent-activity">
+                        <div class="section-header">
+                            <h3><i class="fas fa-history"></i> Последние операции</h3>
+                            <a href="#" class="view-all">Все операции</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Дата</th>
+                                    <th>Тип</th>
+                                    <th>Номер</th>
+                                    <th>Товаров</th>
+                                    <th>Сумма</th>
+                                    <th>Статус</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>15.05.2023</td>
+                                    <td><span class="badge receipt">Приход</span></td>
+                                    <td>ПН-000124</td>
+                                    <td>12</td>
+                                    <td>45,678 ₽</td>
+                                    <td><span class="badge confirmed">Подтвержден</span></td>
+                                </tr>
+                                <tr>
+                                    <td>14.05.2023</td>
+                                    <td><span class="badge shipment">Расход</span></td>
+                                    <td>РН-000098</td>
+                                    <td>8</td>
+                                    <td>32,450 ₽</td>
+                                    <td><span class="badge shipped">Отгружен</span></td>
+                                </tr>
+                                <tr>
+                                    <td>13.05.2023</td>
+                                    <td><span class="badge transfer">Перемещение</span></td>
+                                    <td>ПМ-000045</td>
+                                    <td>5</td>
+                                    <td>-</td>
+                                    <td><span class="badge completed">Завершено</span></td>
+                                </tr>
+                                <tr>
+                                    <td>12.05.2023</td>
+                                    <td><span class="badge receipt">Приход</span></td>
+                                    <td>ПН-000123</td>
+                                    <td>15</td>
+                                    <td>67,890 ₽</td>
+                                    <td><span class="badge confirmed">Подтвержден</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10.05.2023</td>
+                                    <td><span class="badge shipment">Расход</span></td>
+                                    <td>РН-000097</td>
+                                    <td>3</td>
+                                    <td>12,340 ₽</td>
+                                    <td><span class="badge shipped">Отгружен</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Заканчивающиеся товары -->
+                    <div class="low-stock">
+                        <div class="section-header">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Заканчивающиеся товары</h3>
+                            <a href="#" class="view-all">Все товары</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Товар</th>
+                                    <th>Категория</th>
+                                    <th>Остаток</th>
+                                    <th>Мин. запас</th>
+                                    <th>Склад</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Молоко "Домик в деревне" 2,5%</td>
+                                    <td>Молочные продукты</td>
+                                    <td>12</td>
+                                    <td>50</td>
+                                    <td>Холодильный склад</td>
+                                    <td><button class="btn small-btn">Заказать</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Сыр "Российский"</td>
+                                    <td>Молочные продукты</td>
+                                    <td>8</td>
+                                    <td>30</td>
+                                    <td>Холодильный склад</td>
+                                    <td><button class="btn small-btn">Заказать</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Курица охлажденная</td>
+                                    <td>Мясные продукты</td>
+                                    <td>5</td>
+                                    <td>20</td>
+                                    <td>Холодильный склад</td>
+                                    <td><button class="btn small-btn">Заказать</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Бумага офисная А4</td>
+                                    <td>Канцелярия</td>
+                                    <td>3</td>
+                                    <td>10</td>
+                                    <td>Склад готовой продукции</td>
+                                    <td><button class="btn small-btn">Заказать</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
